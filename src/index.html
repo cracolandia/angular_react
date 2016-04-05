@@ -6,14 +6,29 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   </head>
-  <body>
-    <h1>Fast AngularJs</h1> <h3>AngularJs with ReactJs</h3>
-
+  <body ng-app="fasterAngular">
+  <div class="container">
+    <h1 class="header">Faster Rendering With ReactJs</h1>
+    <div ng-controller="mycontroller">
+        <button ng-click="refresh()" class="btn btn-primary">Refresh Data</button>
+        <hr/>
+        <table class="table">
+          <tr ng-repeat="line in data">
+            <td>{{line[0]}}</td>
+            <td>{{line[1]}}</td>
+            <td>{{line[2]}}</td>
+            <td>{{line[3]}}</td>
+            <td>{{line[4]}}</td>
+          </tr>
+        </table>
+    </div>
+  </div>
 
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/react/react.js"></script>
-
+    <script src="js/react_component.js"></script>
+    <script src="js/angular_faster.js"></script>
 </body>
 </html>
